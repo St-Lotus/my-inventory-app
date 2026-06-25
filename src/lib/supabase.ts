@@ -10,14 +10,15 @@ if (!supabaseUrl || !supabaseAnonKey) {
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export interface InventoryItem {
-  id: string;
-  name: string;
+  id: number;                 
+  stock_code: string;         
   barcode: string;
-  quantity: number;
-  category: string | null;
   description: string | null;
+  short_description: string | null; 
+  location: string | null;          
+  category: string | null;
+  main_vendor: string | null;       
+  onhand_qty: number;               
   price: number;
-  supplier: string;
   created_at: string;
-  updated_at: string;
 }
